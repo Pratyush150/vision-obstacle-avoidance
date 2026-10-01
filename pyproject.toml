@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision-avoid"
+version = "0.1.0"
+description = "Depth-camera obstacle avoidance for a differential-drive robot: ground removal, egocentric memory, dynamic-window planning"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Pratyush Vatsa" }]
+keywords = ["obstacle-avoidance", "depth-camera", "dwa", "ransac", "mobile-robot"]
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.5"]
+dev = ["pytest>=7.0", "matplotlib>=3.5"]
+
+[project.urls]
+Homepage = "https://github.com/Pratyush150/vision-obstacle-avoidance"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
